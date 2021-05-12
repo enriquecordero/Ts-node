@@ -1,0 +1,8 @@
+import mongoose, { mongo } from 'mongoose';
+import { mongodb} from './keys'
+
+mongoose.connect(mongodb.URI,{
+    useUnifiedTopology: true
+})
+    .then(db => console.log('Db is connected'))
+    .catch(err => console.log('err'))
